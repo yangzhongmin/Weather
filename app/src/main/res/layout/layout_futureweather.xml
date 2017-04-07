@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="64dp"
+    android:background="#043043"
+    android:padding="6dp"
+    android:gravity="center_vertical">
+
+    <TextView
+        android:id="@+id/tv_date"
+        android:layout_width="0dp"
+        android:layout_weight="5"
+        android:layout_height="wrap_content"
+        android:text="@string/date"
+        android:textSize="20sp"
+        android:textColor="#FFFFFF" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="5"
+        android:layout_height="match_parent"
+        android:gravity="center">
+
+    <ImageView
+        android:id="@+id/iv_weather_fa"
+        android:layout_width="46dp"
+        android:layout_height="46dp" />
+    <ImageView
+        android:id="@+id/iv_weather_fb"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:visibility="invisible"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_future_temp"
+        android:layout_width="0dp"
+        android:layout_weight="4"
+        android:layout_height="wrap_content"
+        android:text="@string/temp"
+        android:textSize="20sp"
+        android:textColor="#FFFFFF" />
+</LinearLayout>

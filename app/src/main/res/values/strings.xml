@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">Weather</string>
     <string name="city_name">城市</string>
+    <string name="date">x月x日</string>
+    <string name="temp">xºC</string>
+    <string name="weather">XX</string>
 </resources>
