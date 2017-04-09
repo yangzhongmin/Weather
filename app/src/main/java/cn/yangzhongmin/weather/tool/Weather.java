@@ -12,14 +12,14 @@ public class Weather {
     private String weather_id_fb;
     private String week;
     private String date;
-    private String time;
+    private String cityName;
 
-    public String getTime() {
-        return time;
+    public String getCityName() {
+        return cityName;
     }
 
-    public void setTime(String time) {
-        this.time = time;
+    public void setCityName(String cityName) {
+        this.cityName= cityName;
     }
 
     public String getDate() {

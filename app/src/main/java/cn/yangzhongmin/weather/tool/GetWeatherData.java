@@ -50,6 +50,10 @@ public class GetWeatherData {
             Weather weather = new Weather();
             tempObject = jsonObject.getJSONObject("sk");
             weather.setTemperature(tempObject.getString("temp"));
+            //湿度、风向、风力放到了实时天气的天气和天气ID中
+            weather.setWeather(tempObject.getString("humidity"));
+            weather.setWeather_id_fa(tempObject.getString("wind_direction"));
+            weather.setWeather_id_fa(tempObject.getString("wind_strength"));
             list.add(weather);
 
             //获取当天的天气情况
@@ -64,7 +68,7 @@ public class GetWeatherData {
             weatherToday.setDate(tempObject.getString("date_y").substring(5));
             weatherToday.setWeek("今天");
             weatherToday.setWeather(tempObject.getString("weather"));
-            weatherToday.setTime(tempObject.getString("city"));
+            weatherToday.setCityName(tempObject.getString("city"));
 
             tempObject = tempObject.getJSONObject("weather_id");
             weatherToday.setWeather_id_fa(tempObject.getString("fa"));

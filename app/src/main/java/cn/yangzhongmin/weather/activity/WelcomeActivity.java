@@ -43,6 +43,7 @@ public class WelcomeActivity extends Activity {
                     public void run() {
                         Intent intent = new Intent(WelcomeActivity.this,MainActivity.class);
                         startActivity(intent);
+                        finish();
                     }
                 },2000
         );
@@ -53,9 +54,10 @@ public class WelcomeActivity extends Activity {
         MyAsyncTask asyncTask = new MyAsyncTask();
         MyAsyncTask2 asyncTask2 = new MyAsyncTask2();
 
-        asyncTask.execute("上海");
         Log.i("location-x-y",longitude+", "+latitude);
+
         asyncTask2.execute(longitude,latitude);
+        asyncTask.execute("上海");
     }
 
     private void initLocation() {

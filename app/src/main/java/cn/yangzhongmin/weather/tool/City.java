@@ -11,8 +11,6 @@ import java.util.ArrayList;
 public class City {
 
     private String cityName;
-    private double locationX;
-    private double locationY;
 
     private ArrayList<Weather> weatherListForFuture;
 
@@ -22,10 +20,8 @@ public class City {
     }
 
     public City(double locationX, double locationY){
-        this.locationX = locationX;
-        this.locationY = locationY;
         weatherListForFuture = GetWeatherData.recodeJsonData(locationX, locationY);
-        this.cityName = weatherListForFuture.get(1).getTime();
+        this.cityName = weatherListForFuture.get(1).getCityName();
     }
 
     public String getCityName() {

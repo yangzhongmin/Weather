@@ -1,6 +1,7 @@
 package cn.yangzhongmin.weather.tool;
 
 import android.content.Context;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -8,6 +9,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 import cn.yangzhongmin.weather.R;
+import cn.yangzhongmin.weather.adapter.MyListViewAdapter;
 
 /**
  * Created by yzm on 2017/4/7.
@@ -27,20 +29,15 @@ public class GetView {
 
     public View getViewPage(Context context, City city){
 
-        view = View.inflate(context,R.layout.layout_weather,null);
-        
-        initView();
-        initViewData(city);
+        view = LayoutInflater.from(context).inflate(R.layout.layout_weather,null);
 
-        /*
-        需要补充根据城市名称或者根据位置获取天气信息的代码
-        并根据获得的天气信息设置view内容
-         */
+        initView();
+        initViewData(context,city);
 
         return view;
     }
 
-    private void initViewData(City city) {
+    private void initViewData(Context context, City city) {
 
         futureWeatherList = city.getWeatherListForFuture();
 
@@ -48,6 +45,8 @@ public class GetView {
         tvCurrentWeather.setText(futureWeatherList.get(1).getWeather());
         tvTodayTemp.setText(futureWeatherList.get(1).getTemperature());
 
+        MyListViewAdapter adapter = new MyListViewAdapter(context,futureWeatherList);
+        lvWeatherList.setAdapter(adapter);
     }
 
     private void initView() {

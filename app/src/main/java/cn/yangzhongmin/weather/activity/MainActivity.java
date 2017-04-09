@@ -43,6 +43,25 @@ public class MainActivity extends Activity implements View.OnClickListener{
         initView();
 
         mImgBtnChoiceCity.setOnClickListener(this);
+        mViewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+                mTVCityName.setText(CityList.cityList.get(position).getCityName());
+                if(position != 0){
+                    mIVLocation.setVisibility(View.INVISIBLE);
+                }
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+
+            }
+        });
     }
 
     @Override
