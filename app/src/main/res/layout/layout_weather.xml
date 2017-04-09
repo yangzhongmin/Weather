@@ -8,7 +8,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="30dp">
+        android:layout_margin="20dp">
 
         <TextView
             android:id="@+id/tv_current_temp"
@@ -21,13 +21,22 @@
             android:layout_margin="5dp"/>
 
         <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tempUnit"
+            android:textColor="#FFFFFF"
+            android:textSize="32sp"
+            android:layout_alignTop="@+id/tv_current_temp"
+            android:layout_toEndOf="@+id/tv_current_temp"/>
+
+        <TextView
             android:id="@+id/tv_current_weather"
             android:layout_below="@id/tv_current_temp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/weather"
             android:textColor="#FFFFFF"
-            android:textSize="32sp"
+            android:textSize="22sp"
             android:layout_centerHorizontal="true"
             android:layout_margin="5dp"/>
 
@@ -38,193 +47,10 @@
             android:layout_height="wrap_content"
             android:text="@string/temp"
             android:textColor="#d6d6d6"
-            android:textSize="22sp"
+            android:textSize="16sp"
             android:layout_centerHorizontal="true" />
 
     </RelativeLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingBottom="12dp">
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/tv_time0"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/date"
-                android:textColor="#FFFFFF"
-                android:gravity="center"/>
-
-            <ImageView
-                android:id="@+id/iv_weather_by_time0"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_gravity="center_horizontal"/>
-
-            <TextView
-                android:id="@+id/tv_temp_by_time0"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/temp"
-                android:layout_gravity="center_horizontal"
-                android:textColor="#FFFFFF" />
-
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/tv_time1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/date"
-                android:textColor="#FFFFFF"
-                android:gravity="center"/>
-
-            <ImageView
-                android:id="@+id/iv_weather_by_time1"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_gravity="center_horizontal"/>
-
-            <TextView
-                android:id="@+id/tv_temp_by_time1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/temp"
-                android:layout_gravity="center_horizontal"
-                android:textColor="#FFFFFF" />
-
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/tv_time2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/date"
-                android:textColor="#FFFFFF"
-                android:gravity="center"/>
-
-            <ImageView
-                android:id="@+id/iv_weather_by_time2"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_gravity="center_horizontal"/>
-
-            <TextView
-                android:id="@+id/tv_temp_by_time2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/temp"
-                android:layout_gravity="center_horizontal"
-                android:textColor="#FFFFFF" />
-
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/tv_time3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/date"
-                android:textColor="#FFFFFF"
-                android:gravity="center"/>
-
-            <ImageView
-                android:id="@+id/iv_weather_by_time3"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_gravity="center_horizontal"/>
-
-            <TextView
-                android:id="@+id/tv_temp_by_time3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/temp"
-                android:layout_gravity="center_horizontal"
-                android:textColor="#FFFFFF" />
-
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/tv_time4"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/date"
-                android:textColor="#FFFFFF"
-                android:gravity="center"/>
-
-            <ImageView
-                android:id="@+id/iv_weather_by_time4"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_gravity="center_horizontal"/>
-
-            <TextView
-                android:id="@+id/tv_temp_by_time4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/temp"
-                android:layout_gravity="center_horizontal"
-                android:textColor="#FFFFFF" />
-
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/tv_time5"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/date"
-                android:textColor="#FFFFFF"
-                android:gravity="center"/>
-
-            <ImageView
-                android:id="@+id/iv_weather_by_time5"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_gravity="center_horizontal"/>
-
-            <TextView
-
-                android:id="@+id/tv_temp_by_time5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/temp"
-                android:layout_gravity="center_horizontal"
-                android:textColor="#FFFFFF" />
-
-        </LinearLayout>
-
-    </LinearLayout>
 
     <ListView
         android:id="@+id/lv_weather_list"

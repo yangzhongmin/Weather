@@ -1,4 +1,4 @@
-package cn.yangzhongmin.weather.bean;
+package cn.yangzhongmin.weather.tool;
 
 /**
  * Created by yzm on 2017/4/6.
@@ -12,14 +12,14 @@ public class Weather {
     private String weather_id_fb;
     private String week;
     private String date;
-    private String updateTime;
+    private String time;
 
-    public String getUpdateTime() {
-        return updateTime;
+    public String getTime() {
+        return time;
     }
 
-    public void setUpdateTime(String updateTime) {
-        this.updateTime = updateTime;
+    public void setTime(String time) {
+        this.time = time;
     }
 
     public String getDate() {
